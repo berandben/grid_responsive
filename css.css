@@ -1,0 +1,88 @@
+* {
+     width: 0px;
+     height: 0px;
+     margin: 0px;
+     padding: 0px;
+     font-size: 100%;
+     box-sizing: border-box;
+}
+
+html {
+     font-size: 0.625rem;
+}
+
+/*
+
+ancho de la pantalla
+alto fijo
+
+el tamaño de fuente en el padre
+
+*/
+.padre {
+     font-size: 20px;
+     display: flex;
+
+     border: 2px solid green;
+
+     width: 100vw;
+     height: 20em;
+}
+
+/*
+ancho el 33% del padre
+alto el mismo que el padre
+evitando desbordamiento
+
+*/
+
+.hijo {
+     display: flex;
+     align-items: center;
+
+     border: 2px solid red;
+     width: 33.33%;
+     height: auto;
+}
+
+/*
+ancho de hijo evitando desbordamiento
+alto 0
+habría que indicar un alto si debajo 
+hubiera otro elemento
+auto ocupa el alto del padre
+
+*/
+
+p {
+     border: 2px solid blue;
+
+     width: auto;
+
+     height: auto;
+
+     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+     /*
+     formato grid
+     .padre {
+          font-size: 16px;
+          height: 20em;
+     }
+
+*/
+
+     .padre {
+          font-size: 16px;
+          height: 40em;
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .hijo {
+          width: 50%;
+          height: 33.33%;
+     }
+}
